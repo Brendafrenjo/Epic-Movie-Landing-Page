@@ -237,6 +237,20 @@
         .loging-info {
           font-size: 9px;
         }
+
+        .interaction-icons {
+          padding-left: 25px;
+        }
+      }
+
+      @media (max-width: 280px) {
+        .alpha-info {
+          display: none;
+        }
+
+        .interactions {
+          padding-right: 25px;
+        }
       }
     </style>
   </head>
@@ -247,16 +261,16 @@
           <div class="col-8">
             <div class="alpha">
               <div><i class="fa-solid fa-n alpha-icon"></i></div>
-              <div class="text-uppercase pe-3 ps-3">
+              <div class="text-uppercase pe-3 ps-3 alpha-info">
                 <a href="#" class="alpha-content" title="Top cast">Top cast</a>
               </div>
-              <div class="text-uppercase pe-3">
+              <div class="text-uppercase pe-3 alpha-info">
                 <a href="#" class="alpha-content" title="Photos">Photos</a>
               </div>
-              <div class="text-uppercase pe-3">
+              <div class="text-uppercase pe-3 alpha-info">
                 <a href="#" class="alpha-content" title="Videos">Videos</a>
               </div>
-              <div class="text-uppercase pe-3">
+              <div class="text-uppercase pe-3 alpha-info">
                 <a href="#" class="alpha-content" title="Similar Movies"
                   >Similar movies</a
                 >
@@ -272,7 +286,7 @@
                 ></i>
               </div>
               <div title="Login">
-                <a href="#" class="login">Login / Sign in</a>
+                <a href="#" class="login">Login</a>
               </div>
             </div>
           </div>
