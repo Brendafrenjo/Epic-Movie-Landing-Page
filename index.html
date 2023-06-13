@@ -100,6 +100,10 @@
         font-size: 11px;
       }
 
+      .search {
+        line-height: 2;
+      }
+
       .login {
         text-decoration: none;
         color: white;
@@ -252,8 +256,16 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="loging-info" title="Login">
-              <a href="#" class="login">Login / Sign in</a>
+            <div class="loging-info">
+              <div class="search-here">
+                <i
+                  class="fa-solid fa-magnifying-glass search pe-4"
+                  id="search-icon"
+                ></i>
+              </div>
+              <div title="Login">
+                <a href="#" class="login">Login / Sign in</a>
+              </div>
             </div>
           </div>
         </div>
@@ -426,5 +438,22 @@
         </div>
       </div>
     </div>
+    <script>
+      function searchHere() {
+        let name = prompt(`What is you name?`);
+        name = name.trim();
+        name = name[0].toUpperCase() + name.substring(1);
+
+        let movie = prompt(`What movie do you want to search?`);
+        movie = movie.trim();
+        movie = movie[0].toUpperCase() + movie.substring(1);
+
+        alert(`Hello ${name}! Have fun watching ${movie} 😃😃`);
+      }
+
+      let searchButton = document.querySelector(".search-here");
+
+      searchButton.addEventListener("click", searchHere);
+    </script>
   </body>
 </html>
