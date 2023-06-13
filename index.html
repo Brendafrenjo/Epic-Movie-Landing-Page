@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Experience the awe-inspiring tale of a fearless African warrior queen leading her people into battle against colonial forces in 'Woman King's', a captivating and empowering historical drama."
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,20 +20,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&family=Roboto:wght@300;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;700;900&display=swap"
       rel="stylesheet"
     />
-    <title>Woman King Landing Page</title>
+    <title>The Landing Page for the Movie Woman King</title>
     <style>
       .root {
-        --heading-font-family: "Roboto", sans-serif;
+        --heading-font-family: "Roboto Condensed", sans-serif;
         --default-font-family: "Poppins", sans-serif;
         --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.12);
+        --buttons-color: #1f58fe;
       }
 
       body {
         max-width: 900px;
-        margin: 100px auto;
+        margin: 60px auto;
         background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
       }
 
@@ -43,17 +48,16 @@
       h3 {
         font-family: var(--default-font-family);
         font-weight: 500;
-        font-size: 18px;
+        font-size: 16px;
       }
 
       p {
         font-family: var(--default-font-family);
         font-weight: 400;
-        font-size: 10px;
+        font-size: 12px;
       }
 
-      .posters {
-        height: 50px;
+      .popular {
         width: 200px;
       }
 
@@ -61,14 +65,14 @@
         max-width: 800px;
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.5)
+            rgba(0, 0, 0, 0.6)
           ),
-          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/364/original/main-poster-woman-king.jpg?1686608221);
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/391/original/woman-king-first.jpg?1686616928);
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.8;
         color: white;
-        padding-top: 20px;
+        padding: 30px;
         border-radius: 10px;
       }
 
@@ -78,7 +82,8 @@
         justify-content: flex-start;
       }
 
-      .alpha-content {
+      .alpha-content,
+      .view {
         text-decoration: none;
         color: black;
         color: white;
@@ -95,17 +100,39 @@
         font-size: 11px;
       }
 
+      .login {
+        text-decoration: none;
+        color: white;
+      }
+
+      .interaction-icons {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .interactions {
+        padding-right: 35px;
+      }
+
       .beta {
-        padding-top: 210px;
+        padding-top: 20px;
       }
 
       .btn-play {
         color: white;
-        background-color: #1f57ff;
+        background-color: #1f58fe;
         font-size: 11px;
-        padding: 7px 20px;
+        padding: 10px 20px;
         margin-right: 25px;
+        box-shadow: var(--box-shadow);
+      }
 
+      .btn-play:hover {
+        color: white;
+        background-color: #1f58fe;
+        font-size: 11px;
+        padding: 10px 20px;
+        margin-right: 25px;
         box-shadow: var(--box-shadow);
       }
 
@@ -113,7 +140,16 @@
         color: white;
         background-color: transparent;
         font-size: 11px;
-        padding: 7px 30px;
+        padding: 10px 30px;
+        box-shadow: var(--box-shadow);
+        border: 1px solid white;
+      }
+
+      .btn-trailer:hover {
+        color: white;
+        background-color: transparent;
+        font-size: 11px;
+        padding: 10px 30px;
         box-shadow: var(--box-shadow);
         border: 1px solid white;
       }
@@ -123,25 +159,75 @@
         justify-content: flex-start;
       }
 
-      .actors {
-        height: 30px;
-        border-radius: 100%;
-        width: 30px;
-      }
-
-      .view-all {
-        border: 1px solid white;
-        border-radius: 50%;
+      .posters {
         height: 50px;
-        line-height: 1.5;
-        padding-top: 8px;
-        text-align: center;
-        font-size: 13px;
       }
 
-      @media (max-width: 900px) {
-        .hero {
+      .popular-shows {
+        font-size: 14px;
+      }
 
+      .view {
+        font-size: 12px;
+        padding-top: 15px;
+        line-height: 2;
+      }
+
+      .shows {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+      }
+
+      @media (max-width: 540px) {
+        h1,
+        h3,
+        p {
+          text-align: center;
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        .hero {
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.6)
+            ),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/413/original/woman-king-small.jpg?1686626057);
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: 0.8;
+        }
+
+        .operation-buttons {
+          display: block;
+          text-align: center;
+        }
+
+        .btn-play {
+          margin: 25px;
+          margin-top: 10px;
+        }
+
+        .btn-trailer {
+          padding: 10px 40px;
+        }
+
+        .interaction-icons {
+          justify-content: center;
+        }
+
+        .movies a {
+          width: 150px;
+          margin: 0 auto;
+          display: block;
+        }
+
+        .popular {
+          width: 100px;
         }
       }
     </style>
@@ -154,25 +240,24 @@
             <div class="alpha">
               <div><i class="fa-solid fa-n alpha-icon"></i></div>
               <div class="text-uppercase pe-3 ps-3">
-                <a href="" class="alpha-content">Top cast</a>
+                <a href="#" class="alpha-content" title="Top cast">Top cast</a>
               </div>
               <div class="text-uppercase pe-3">
-                <a href="" class="alpha-content">Photos</a>
+                <a href="#" class="alpha-content" title="Photos">Photos</a>
               </div>
               <div class="text-uppercase pe-3">
-                <a href="" class="alpha-content">Videos</a>
+                <a href="#" class="alpha-content" title="Videos">Videos</a>
               </div>
               <div class="text-uppercase pe-3">
-                <a href="" class="alpha-content">Similar movies</a>
+                <a href="#" class="alpha-content" title="Similar movies"
+                  >Similar movies</a
+                >
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="loging-info">
-              <div class="pe-4">
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-              <div>Login / Sign in</div>
+            <div class="loging-info" title="Login">
+              <a href="#" class="login">Login / Sign in</a>
             </div>
           </div>
         </div>
@@ -187,75 +272,162 @@
               Kingdom of Dahomey, one of the most powerful states of Africa in
               the 18th and 19th centuries.
             </p>
+            <div class="interaction-icons pb-3">
+              <div>
+                <i class="fa-solid fa-thumbs-up interactions" title="Like"></i>
+              </div>
+              <div>
+                <i
+                  class="fa-solid fa-thumbs-down interactions"
+                  title="Disike"
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-solid fa-download interactions"
+                  title="Download"
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-solid fa-share-nodes interactions"
+                  title="Share"
+                ></i>
+              </div>
+              <div>
+                <i
+                  class="fa-sharp fa-solid fa-plus interactions"
+                  title="Add to Watchlist"
+                ></i>
+              </div>
+            </div>
             <div class="operation-buttons">
               <div>
-                <a href="" class="text-uppercase btn btn-play"
+                <a href="" class="text-uppercase btn btn-play" title="Play Now"
                   ><i class="fa-solid fa-play"></i>
                   <span class="ps-1"> Play Now </span></a
                 >
               </div>
               <div>
-                <a href="" class="text-uppercase btn btn-trailer">Trailer</a>
+                <a
+                  href=""
+                  class="text-uppercase btn btn-trailer"
+                  title="Trailer"
+                  >Trailer</a
+                >
               </div>
             </div>
           </div>
-          <div class="col-sm-6 p-4">
-            <h3>Posters</h3>
-            <div class="row">
-              <div class="col-4">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/361/original/poster-3-woman-king.jpg?1686608197"
-                  alt=""
-                  class="img-fluid posters rounded"
-                />
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="shows">
+              <div>
+                <h3 class="pt-3 text-uppercase popular-shows">
+                  Top trending now
+                </h3>
               </div>
-              <div class="col-4">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/360/original/poster-4-woman-king.jpg?1686608189"
-                  alt=""
-                  class="img-fluid posters rounded"
-                />
-              </div>
-              <div class="col-4">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/363/original/poster-1-woman-king.jpg?1686608214"
-                  alt=""
-                  class="img-fluid posters rounded"
-                />
+              <div>
+                <i
+                  class="fa-solid fa-chevron-left pe-1 view"
+                  title="Backward"
+                ></i>
+                <i
+                  class="fa-solid fa-chevron-right view ps-3"
+                  title="Forward"
+                ></i>
               </div>
             </div>
-            <h3 class="pt-4">Actors</h3>
-            <div class="row">
-              <div class="col-3">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/368/original/Viola-Davis.jpg?1686610017"
-                  alt="Viola Davis"
-                  class="img-fluid actors"
-                />
-                <p>Viola Davis</p>
-              </div>
-              <div class="col-3">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/369/original/Thuso-Mbedu.jpg?1686610118"
-                  alt="Thuso Mbedu"
-                  class="img-fluid actors"
-                />
-                <p>Thuso Mbedu</p>
-              </div>
-              <div class="col-3">
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/370/original/Lashana-Lynch.jpg?1686610151"
-                  alt="Lashana Lynch"
-                  class="img-fluid actors"
-                />
-                <p>Lashana Lynch</p>
-              </div>
-              <div class="col-3 text-uppercase view-all">
-                <p>
-                  View <br />
-                  all
-                </p>
-              </div>
+          </div>
+        </div>
+        <div class="movies">
+          <div class="row">
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/395/original/the-adam.jpg?1686620366"
+                alt="The Adam Project"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">The Adam Project</p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >Play now</a
+              >
+            </div>
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/394/original/the-contractor.jpg?1686620160"
+                alt="The Contractor"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">The Contractor</p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >play now</a
+              >
+            </div>
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/396/original/hello-goodbye.jpg?1686620492"
+                alt="Hello Goodbye and Everything in Between"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">
+                Hello Goodbye and Everything in Between
+              </p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >play now</a
+              >
+            </div>
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/397/original/rogue-agent.jpg?1686620587"
+                alt="Rogue Agent"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">Rogue Agent</p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >play now</a
+              >
+            </div>
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/398/original/the-in-between.jpg?1686620760"
+                alt="The in Between"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">The in Between</p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >play now</a
+              >
+            </div>
+            <div class="col-sm-2">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/399/original/unchartered.jpg?1686621007"
+                alt="Unchartered"
+                class="img-fluid popular pb-3 d-none d-sm-block"
+              />
+              <p class="d-block d-sm-none pt-2">Unchartered</p>
+              <a
+                href=""
+                class="btn btn-play text-uppercase d-block d-sm-none"
+                title="Play Now"
+                >play now</a
+              >
             </div>
           </div>
         </div>
