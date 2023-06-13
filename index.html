@@ -21,13 +21,55 @@
     />
     <title>Woman King Landing Page</title>
     <style>
+      .root {
+        --heading-font-family: "Roboto", sans-serif;
+        --default-font-family: "Poppins", sans-serif;
+        --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.12);
+      }
+
       body {
-        max-width: 800px;
+        max-width: 900px;
         margin: 100px auto;
+        background: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+      }
+
+      h1 {
+        font-family: var(--heading-font-family);
+        font-weight: 700;
+        line-height: 2;
+        font-size: 40px;
+      }
+
+      h3 {
+        font-family: var(--default-font-family);
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      p {
+        font-family: var(--default-font-family);
+        font-weight: 400;
+        font-size: 10px;
+      }
+
+      .posters {
+        height: 50px;
+        width: 200px;
       }
 
       .hero {
-        max-width: 700px;
+        max-width: 800px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/364/original/main-poster-woman-king.jpg?1686608221);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        color: white;
+        padding-top: 20px;
+        border-radius: 10px;
       }
 
       .alpha {
@@ -36,16 +78,70 @@
         justify-content: flex-start;
       }
 
+      .alpha-content {
+        text-decoration: none;
+        color: black;
+        color: white;
+      }
+
+      .alpha-icon {
+        font-size: 20px;
+        color: #c62037;
+      }
+
       .loging-info {
         display: flex;
         justify-content: flex-end;
         font-size: 11px;
       }
 
+      .beta {
+        padding-top: 210px;
+      }
+
+      .btn-play {
+        color: white;
+        background-color: #1f57ff;
+        font-size: 11px;
+        padding: 7px 20px;
+        margin-right: 25px;
+
+        box-shadow: var(--box-shadow);
+      }
+
+      .btn-trailer {
+        color: white;
+        background-color: transparent;
+        font-size: 11px;
+        padding: 7px 30px;
+        box-shadow: var(--box-shadow);
+        border: 1px solid white;
+      }
+
+      .operation-buttons {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .actors {
+        height: 30px;
+        border-radius: 100%;
+        width: 30px;
+      }
+
+      .view-all {
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 50px;
+        line-height: 1.5;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 13px;
+      }
+
       @media (max-width: 900px) {
-        body {
-          max-width: 100%;
-          margin: 100px auto;
+        .hero {
+
         }
       }
     </style>
@@ -56,11 +152,19 @@
         <div class="row">
           <div class="col-8">
             <div class="alpha">
-              <div><i class="fa-solid fa-n"></i></div>
-              <div class="text-uppercase pe-3 ps-3">Top cast</div>
-              <div class="text-uppercase pe-3">Photos</div>
-              <div class="text-uppercase pe-3">Videos</div>
-              <div class="text-uppercase pe-3">Similar movies</div>
+              <div><i class="fa-solid fa-n alpha-icon"></i></div>
+              <div class="text-uppercase pe-3 ps-3">
+                <a href="" class="alpha-content">Top cast</a>
+              </div>
+              <div class="text-uppercase pe-3">
+                <a href="" class="alpha-content">Photos</a>
+              </div>
+              <div class="text-uppercase pe-3">
+                <a href="" class="alpha-content">Videos</a>
+              </div>
+              <div class="text-uppercase pe-3">
+                <a href="" class="alpha-content">Similar movies</a>
+              </div>
             </div>
           </div>
           <div class="col-4">
@@ -73,39 +177,85 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container beta">
         <div class="row">
-          <div class="col-7">
+          <div class="col-sm-6">
             <h1>Woman King</h1>
-            <h5>⭐ 6.9 | 1055 2h 15m . Action, Historical Drama . 2022</h5>
+            <p>⭐ 6.9 | 1055 2h 15m . Action, Historical Drama . 2022</p>
             <p>
               A historical epic inspired by true events that took place in The
               Kingdom of Dahomey, one of the most powerful states of Africa in
               the 18th and 19th centuries.
             </p>
-            <div>
-              <a href="" class="text-uppercase">Play Now</a>
-            </div>
-            <div>
-              <a href="" class="text-uppercase">Trailer</a>
+            <div class="operation-buttons">
+              <div>
+                <a href="" class="text-uppercase btn btn-play"
+                  ><i class="fa-solid fa-play"></i>
+                  <span class="ps-1"> Play Now </span></a
+                >
+              </div>
+              <div>
+                <a href="" class="text-uppercase btn btn-trailer">Trailer</a>
+              </div>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-sm-6 p-4">
             <h3>Posters</h3>
             <div class="row">
-              <div class="col-3"></div>
-              <div class="col-3"></div>
-              <div class="col-3"></div>
-              <div class="col-3"></div>
+              <div class="col-4">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/361/original/poster-3-woman-king.jpg?1686608197"
+                  alt=""
+                  class="img-fluid posters rounded"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/360/original/poster-4-woman-king.jpg?1686608189"
+                  alt=""
+                  class="img-fluid posters rounded"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/363/original/poster-1-woman-king.jpg?1686608214"
+                  alt=""
+                  class="img-fluid posters rounded"
+                />
+              </div>
             </div>
-            <h3>Actors</h3>
+            <h3 class="pt-4">Actors</h3>
             <div class="row">
-              <div class="col-2"></div>
-              <div class="col-2"></div>
-              <div class="col-2"></div>
-              <div class="col-2"></div>
-              <div class="col-2"></div>
-              <div class="col-2"></div>
+              <div class="col-3">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/368/original/Viola-Davis.jpg?1686610017"
+                  alt="Viola Davis"
+                  class="img-fluid actors"
+                />
+                <p>Viola Davis</p>
+              </div>
+              <div class="col-3">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/369/original/Thuso-Mbedu.jpg?1686610118"
+                  alt="Thuso Mbedu"
+                  class="img-fluid actors"
+                />
+                <p>Thuso Mbedu</p>
+              </div>
+              <div class="col-3">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/370/original/Lashana-Lynch.jpg?1686610151"
+                  alt="Lashana Lynch"
+                  class="img-fluid actors"
+                />
+                <p>Lashana Lynch</p>
+              </div>
+              <div class="col-3 text-uppercase view-all">
+                <p>
+                  View <br />
+                  all
+                </p>
+              </div>
             </div>
           </div>
         </div>
