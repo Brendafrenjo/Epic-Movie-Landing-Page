@@ -1,0 +1,168 @@
+.root {
+  --heading-font-family: "Roboto Condensed", sans-serif;
+  --default-font-family: "Poppins", sans-serif;
+  --box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.12);
+  --buttons-color: #1f58fe;
+}
+
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(20, 25, 35) 11.2%,
+    rgb(10, 20, 40) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+h1 {
+  font-family: var(--default-font-family);
+}
+
+h3 {
+  font-family: var(--default-font-family);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-family: var(--default-font-family);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.popular {
+  width: 200px;
+}
+
+.hero {
+  opacity: 0.8;
+  color: white;
+  padding: 30px;
+}
+
+.beta {
+  padding-top: 260px;
+}
+
+.btn-play {
+  box-shadow: var(--box-shadow);
+}
+
+.btn-play:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.btn-trailer {
+  box-shadow: var(--box-shadow);
+}
+
+.btn-trailer:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.posters {
+  height: 50px;
+}
+
+.popular-shows {
+  font-size: 14px;
+}
+
+.view {
+  font-size: 12px;
+  padding-top: 15px;
+  line-height: 2;
+}
+
+.shows {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+@media (max-width: 540px) {
+  h1,
+  h3,
+  p {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+      url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/413/original/woman-king-small.jpg?1686626057);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+  }
+
+  .operation-buttons {
+    display: block;
+    text-align: center;
+  }
+
+  .btn-play {
+    margin: 25px;
+    margin-top: 10px;
+  }
+
+  .btn-trailer {
+    padding: 10px 40px;
+  }
+
+  .interaction-icons {
+    justify-content: center;
+  }
+
+  .movies a {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .alpha {
+    font-size: 8px;
+  }
+
+  .loging-info {
+    font-size: 9px;
+  }
+
+  .interaction-icons {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 280px) {
+  h1 {
+    line-height: 1;
+    margin: 20px 0 30px;
+    font-size: 30px;
+  }
+
+  .alpha-info {
+    display: none;
+  }
+
+  .interactions {
+    padding-right: 25px;
+  }
+}
