@@ -23,6 +23,7 @@ desktopDropdownButton.addEventListener("click", () => {
   desktopDropdownMenu.classList.toggle("hidden");
 });
 
+//Movie Scrolling Logic
 const scrollContainer = document.getElementById("movie-container");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
@@ -43,5 +44,31 @@ const scrollRight = () => {
   });
 };
 
+// Attach event listeners
 prevButton.addEventListener("click", scrollLeft);
 nextButton.addEventListener("click", scrollRight);
+
+//Series Scrolling Logic
+const scrollingContainer = document.getElementById("series-container");
+const previousButton = document.getElementById("prev-button");
+const nextingButtonSeries = document.getElementById("next-button");
+
+// Function to scroll left
+const scrollLeftSeries = () => {
+  scrollingContainer.scrollBy({
+    left: -200, // Adjust the scroll distance as needed
+    behavior: "smooth",
+  });
+};
+
+// Function to scroll right
+const scrollRightSeries = () => {
+  scrollingContainer.scrollBy({
+    left: 200, // Adjust the scroll distance as needed
+    behavior: "smooth",
+  });
+};
+
+// Attach event listeners
+previousButton.addEventListener("click", scrollLeftSeries);
+nextingButtonSeries.addEventListener("click", scrollRightSeries);

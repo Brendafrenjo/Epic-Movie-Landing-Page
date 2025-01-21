@@ -74,6 +74,32 @@ p {
   box-shadow: var(--box-shadow);
 }
 
+#movie-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+#movie-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Smooth scrolling for a better user experience */
+#series-container {
+  scroll-behavior: smooth;
+}
+
+#series-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+#series-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Smooth scrolling for a better user experience */
+#series-container {
+  scroll-behavior: smooth;
+}
+
 .posters {
   height: 50px;
 }
