@@ -72,3 +72,41 @@ const scrollRightSeries = () => {
 // Attach event listeners
 previousButton.addEventListener("click", scrollLeftSeries);
 nextingButtonSeries.addEventListener("click", scrollRightSeries);
+
+//Gallery Section
+const photoFolder = 'gallery/'; 
+    const photos = [
+      { src: `${photoFolder}Photo 1.jpg`, title: "Photo 1" },
+      { src: `${photoFolder}Photo 2.jpg`, title: "Photo 2" },
+      { src: `${photoFolder}Photo 3.jpg`, title: "Photo 3" },
+      { src: `${photoFolder}Photo 4.jpg`, title: "Photo 4" },
+      { src: `${photoFolder}Photo 5.jpg`, title: "Photo 5" },
+      { src: `${photoFolder}Photo 6.jpg`, title: "Photo 6" },
+      { src: `${photoFolder}Photo 7.jpg`, title: "Photo 7" },
+      { src: `${photoFolder}Photo 8.jpg`, title: "Photo 8" },
+      { src: `${photoFolder}Photo 9.jpg`, title: "Photo 9" },
+      { src: `${photoFolder}Photo 10.jpg`, title: "Photo 10" },
+      { src: `${photoFolder}Photo 11.jpg`, title: "Photo 11" },
+      { src: `${photoFolder}Photo 12.jpg`, title: "Photo 12" },
+      { src: `${photoFolder}Photo 13.jpg`, title: "Photo 13" },
+      { src: `${photoFolder}Photo 14.jpg`, title: "Photo 14" },
+    ];
+
+    const gallery = document.getElementById('gallery');
+
+    photos.forEach(photo => {
+      const item = document.createElement('div');
+      item.classList.add('gallery-item');
+
+      const img = document.createElement('img');
+      img.src = photo.src;
+      img.alt = photo.title;
+
+      const caption = document.createElement('div');
+      caption.classList.add('caption');
+      caption.textContent = photo.title;
+
+      item.appendChild(img);
+      item.appendChild(caption);
+      gallery.appendChild(item);
+    });
